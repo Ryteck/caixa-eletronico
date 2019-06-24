@@ -2,6 +2,7 @@ package logic;
 
 import application.Global;
 import application.JsonConvert;
+import exceptions.CedulasNegativasException;
 
 public class Modificador {
 
@@ -13,6 +14,7 @@ public class Modificador {
 
         for (int cont = 0; cont < quantidade.length; cont++){
             if (isDecremento){
+                if (Global.banco.getQuantidade()[cont] - modificador[cont] < 0){throw new CedulasNegativasException(); }
                 quantidade[cont] -= modificador[cont];
             }else {
                 quantidade[cont] += modificador[cont];

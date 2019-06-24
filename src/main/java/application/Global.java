@@ -14,7 +14,7 @@ public class Global {
 
     public final static Cedulas[] tipos = new Cedulas[]{Cedulas.C002, Cedulas.C005, Cedulas.C010, Cedulas.C020, Cedulas.C050, Cedulas.C100};
 
-    public final static String[] joption = new String[]{"Sacar dinheiro", "Modificar Banco", "Resetar o Banco"};
+    public final static String[] joption = new String[]{"Sacar dinheiro", "Modificar Banco"};
 
     public static void configScreen(String title, String path){
 
