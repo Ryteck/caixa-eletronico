@@ -4,11 +4,12 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Initializer extends Application {
 
-    public static Stage stage;
+    private static Stage stage;
 
     public static String[] sets = new String[2];
 
@@ -24,6 +25,7 @@ public class Initializer extends Application {
         Scene scene = new Scene(root);
 
         stage.setTitle(Initializer.sets[1]);
+        stage.getIcons().add(new Image(Global.iconPath));
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
