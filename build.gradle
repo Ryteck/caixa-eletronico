@@ -16,5 +16,3 @@ dependencies {
     compile 'com.jfoenix:jfoenix:8.0.8'
     implementation 'com.google.code.gson:gson:2.8.5'
 }
-
-

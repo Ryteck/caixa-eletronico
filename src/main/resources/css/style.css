@@ -1,9 +1,9 @@
 .background{
--fx-background-color: #00FFFF;
+-fx-background-color: #105170;
 }
 
 .button-shape{
-	-fx-background-color: #008080;
+	-fx-background-color: #3c8ce4;
 	-fx-background-radius: 25;
 	-fx-border-radius: 25;
 }

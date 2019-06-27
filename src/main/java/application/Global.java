@@ -5,6 +5,8 @@ import models.Banco;
 
 public class Global {
 
+    private static Initializer screen = new Initializer();
+
     public final static String jsonDirectory = "./json";
     public final static String jsonPath = "./json/notas.json";
 
@@ -15,6 +17,13 @@ public class Global {
     public final static Cedulas[] tipos = new Cedulas[]{Cedulas.C002, Cedulas.C005, Cedulas.C010, Cedulas.C020, Cedulas.C050, Cedulas.C100};
 
     public final static String[] joption = new String[]{"Sacar dinheiro", "Modificar Banco"};
+
+    public static void initHome(){
+
+        Global.configScreen("Home", "home");
+        screen.home();
+
+    }
 
     public static void configScreen(String title, String path){
 

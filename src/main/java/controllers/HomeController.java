@@ -2,7 +2,6 @@ package controllers;
 
 import application.Global;
 import application.Initializer;
-import application.JsonConvert;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 

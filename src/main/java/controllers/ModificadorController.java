@@ -71,6 +71,7 @@ public class ModificadorController implements Initializable {
     private void reset(){
         json.resetar();
         atualizar();
+        limpar();
     }
 
     @FXML
@@ -99,19 +100,11 @@ public class ModificadorController implements Initializable {
                 JOptionPane.showMessageDialog(null, e.getMessage());
             }
 
+            limpar();
+
         }catch (NumberFormatException e){
             JOptionPane.showMessageDialog(null, "insira apenas numeros nao muito grandes");
         }
-    }
-
-    @FXML
-    private void atualizar(){
-        q002.setText(String.valueOf(Global.banco.getQuantidade()[0]));
-        q005.setText(String.valueOf(Global.banco.getQuantidade()[1]));
-        q010.setText(String.valueOf(Global.banco.getQuantidade()[2]));
-        q020.setText(String.valueOf(Global.banco.getQuantidade()[3]));
-        q050.setText(String.valueOf(Global.banco.getQuantidade()[4]));
-        q100.setText(String.valueOf(Global.banco.getQuantidade()[5]));
     }
 
     @FXML
@@ -123,5 +116,23 @@ public class ModificadorController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void limpar(){
+        c002.setText("");
+        c005.setText("");
+        c010.setText("");
+        c020.setText("");
+        c050.setText("");
+        c100.setText("");
+    }
+
+    private void atualizar(){
+        q002.setText(String.valueOf(Global.banco.getQuantidade()[0]));
+        q005.setText(String.valueOf(Global.banco.getQuantidade()[1]));
+        q010.setText(String.valueOf(Global.banco.getQuantidade()[2]));
+        q020.setText(String.valueOf(Global.banco.getQuantidade()[3]));
+        q050.setText(String.valueOf(Global.banco.getQuantidade()[4]));
+        q100.setText(String.valueOf(Global.banco.getQuantidade()[5]));
     }
 }
